@@ -15,8 +15,8 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($users as $user)
                     <tr>
-                    @foreach ($users as $user)    
                         <th scope="row">3</th>
                         <td>
                             @if ($user->id == Auth::id())
@@ -27,8 +27,8 @@
                         </td>
                         <td>{{count($user->picks)}}</td>
                         <!-- <td>0</td> -->
-                    @endforeach    
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
